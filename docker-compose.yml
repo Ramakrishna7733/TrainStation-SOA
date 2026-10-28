@@ -1,0 +1,19 @@
+
+services:
+  backend:
+    image: ramakrishna7733/docker-backend-2400031163:latest
+    build:
+      context: ./TrainStation
+    ports:
+      - "7001:7000"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/TrainStation
+
+  frontend:
+    image: ramakrishna7733/docker-frontend-2400031163:latest
+    build:
+      context: ./trainstation-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

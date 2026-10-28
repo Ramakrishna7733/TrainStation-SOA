@@ -1,0 +1,20 @@
+
+# Java / Maven
+TrainStation/target/
+TrainStation/.settings/
+TrainStation/.classpath
+TrainStation/.project
+
+# Node / React
+trainstation-frontend/node_modules/
+trainstation-frontend/dist/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
